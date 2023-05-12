@@ -1,38 +1,86 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* loading */
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+.loading-overlay .ant-spin {
+  font-size: 2rem;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+/* Remove required asterisk */
+.ant-form-item .ant-form-item-label > label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::before {
+  display: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Remove label text decoration */
+.ant-form-item .ant-form-item-label > label::after {
+  content: "";
+}
+
+/* Input field styling */
+.ant-input,
+.ant-input-affix-wrapper {
+  border-radius: 0;
+  padding: 8px 11px;
+}
+
+/* Submit button styling */
+.submit-button {
+  color: white;
+  background-color: black;
+  box-shadow: none;
+  margin:15px 0;
+}
+
+/* Google submit button styling */
+.submit-button-google {
+  color: black;
+  background-color: #f8f8f8;
+  box-shadow: none;
+}
+
+/* Large button styling */
+.ant-btn.ant-btn-lg {
+  border-radius: 0;
+}
+
+/* Link styling */
+a {
+  color: black;
+  text-decoration: underline;
+}
+
+/* Login layout */
+.login-layout {
+  height: 100vh;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+/* Login background image */
+.login-background {
+  background-image: url("./assets/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* Login form */
+.login-form {
+  width: 70%;
+  margin: 0 auto;
+  padding-top: 7rem;
 }
